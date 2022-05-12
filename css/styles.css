@@ -1,0 +1,159 @@
+:root {
+    --hyperlink-blue: #0645ad;
+    --white: #f2f2f2;
+    --yellow-cta: #fffafa;
+    --pure-white: #fff;
+    --red: #E23A39;
+    --green: #0f893b;
+    --purple: #210825;
+    --dark-purple: #0A0022;
+    --dark-grey: #343434;
+    --fade-grey: #34343450;
+    --yellow: #8c6f23;
+    --blue-grey: #484d64;
+    --light-blue: #b9c4ce;
+    --dark-blue: #1d2540;
+    --black-shadow: #00000035;
+}
+
+* {
+    font-family: "Europa", Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-size: 6rem;
+    font-weight: lighter;
+    margin: auto;
+}
+
+h2 {
+    font-size: 3.75rem;
+    font-weight: lighter;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+h4 {
+    font-size: 2.12rem;
+    font-weight: normal;
+}
+
+h5 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+h6 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+header {
+    text-align: center;
+}
+
+.logo {
+    width: 200px;
+    margin: 20px auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    border: 1px var(--fade-grey);
+    border-style: solid none solid none;
+    margin: 12px auto;
+}
+
+.nav a {
+    color: var(--dark-grey);
+    padding: 15px;
+    width: 200px;
+}
+
+.nav a:hover {
+    background-color: var(--fade-grey);
+    transition: 0.3s;
+}
+
+.banner {
+    transform: scaleX(-1);
+    background-image: url("../images/CartoonUniverse1.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: var(--white);
+    width: 80%;
+    margin:  50px auto;
+    border-radius: 5px;
+}
+
+.banner-content {
+    transform: scaleX(-1);
+    width: 800px;
+    text-align: center;
+    float: right;
+}
+
+.banner-content h1 {
+    padding: 20px 0 50px 0;
+}
+
+.banner-content a {
+    background-color: var(--yellow);
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 20px 50px;
+    color: var(--white);
+}
+
+.welcome {
+    margin: auto;
+    width: 70%;
+}
+
+.welcome h2 {
+    margin: auto;
+}
+
+.welcome-content {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, auto);
+}
+
+.welcome-img {
+    margin: auto;
+    text-align: center;
+}
+
+.welcome-img img {
+    width: 70%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 75px auto;
+    padding-top: 25px;
+    color: var(--light-blue);
+    border-top: 1px solid var(--dark-blue);
+}
+
+footer img {
+    max-width: 100px;
+}
