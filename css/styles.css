@@ -4,6 +4,7 @@
     --yellow-cta: #fffafa;
     --pure-white: #fff;
     --red: #E23A39;
+    --red-transparent: #F2414190;
     --green: #0f893b;
     --purple: #210825;
     --dark-purple: #0A0022;
@@ -19,6 +20,11 @@
 * {
     font-family: "Europa", Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+}
+
+main {
+    margin: auto;
+    padding: 0 16px;
 }
 
 a {
@@ -83,11 +89,32 @@ header {
     color: var(--dark-grey);
     padding: 15px;
     width: 200px;
+    transition: 0.3s;
 }
 
 .nav a:hover {
     background-color: var(--fade-grey);
-    transition: 0.3s;
+}
+
+.breadcrumb {
+    text-align: left;
+    padding: 12px 16px;
+    list-style: none;
+    background: var(--white);
+}
+
+.breadcrumb li {
+    display: inline;
+}
+
+.breadcrumb li+li:before {
+    margin: 5px;
+    content: "/";
+
+}
+
+.breadcrumb li a {
+    color: var(--hyperlink-blue)
 }
 
 .banner {
@@ -95,9 +122,9 @@ header {
     background-image: url("../images/CartoonUniverse1.jpeg");
     background-size: cover;
     background-position: center;
-    height: 400px;
+    height: 450px;
     color: var(--white);
-    width: 80%;
+    max-width: 1484px;
     margin:  50px auto;
     border-radius: 5px;
 }
@@ -110,39 +137,417 @@ header {
 }
 
 .banner-content h1 {
-    padding: 20px 0 50px 0;
+    padding: 70px 0;
+    line-height: 90px;
 }
 
 .banner-content a {
-    background-color: var(--yellow);
+    background-color: var(--red-transparent);
+    border: 5px solid var(--red);
     text-transform: uppercase;
-    border-radius: 5px;
-    padding: 20px 50px;
+    border-radius: 50px;
+    padding: 15px 50px;
     color: var(--white);
+    font-size: 1.2rem;
+}
+
+.welcome-container {
+    margin: auto;
+    max-width: 1300px;
+}
+
+.welcome-container h2 {
+    margin: auto;
+    color: var(--dark-grey);
 }
 
 .welcome {
-    margin: auto;
-    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
 }
 
-.welcome h2 {
+.welcome-text {
+    border-radius: 6px;
+    max-width: 625px;
     margin: auto;
 }
 
-.welcome-content {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(2, auto);
+.welcome img {
+    max-width: 625px;
+    object-fit: cover;
 }
 
-.welcome-img {
+/* STORE PAGE */
+.store-banner {
+    background-image: url(../images/CartoonUniverse2crop.jpg);
+    background-size: cover;
+    background-position: 50% 37%;
+    max-width: 1484px;
+    height: 450px;
+    color: var(--white);
+    margin: 50px auto;
+    padding-top: 120px;
+    border-radius: 5px;
+}
+
+.store-banner h1 {
+    text-align: center;
+    float: left;
+    width: 800px;
+    line-height: 90px;
+}
+
+.store-heading {
+    text-align: center;
+    margin: 150px auto 100px auto;
+}
+
+.search-container {
+    text-align: center;
     margin: auto;
+}
+
+.search-container input {
+    padding: 10px 8px;
+    width: 800px;
+    font-size: 1rem;
+}
+
+.search-container label {
+    font-size: 1.2rem;
+}
+
+.recommended-container h4 {
+    text-align: center;
+    background-color: var(--blue-grey);
+    color: var(--white);
+    padding: 10px;
+    margin: 26px auto 10px auto;
+    max-width: 1484px;
+}
+
+.recommended {
+    max-width: 1484px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.product-card {
+    max-width: 300px;
+    text-align: center;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px var(--black-shadow);
+}
+
+.product-card div {
+    color: var(--dark-grey);
     text-align: center;
 }
 
-.welcome-img img {
-    width: 70%;
+.product-card img {
+    max-width: 300px;
+}
+
+.product-card h5 {
+    margin: auto;
+    padding: 8px 0 16px 0;
+}
+
+.product-info {
+    border-top: 1px solid var(--fade-grey);
+    border-bottom: 1px solid var(--fade-grey);
+    padding-bottom: 14px;
+}
+
+.readmore {
+    color: var(--hyperlink-blue);
+    border-bottom: 1px solid var(--hyperlink-blue);
+}
+
+.product-cart {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.product-cart button {
+    background-color: var(--yellow);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px var(--fade-grey);
+    font-size: 1.4rem;
+    margin: auto 0;
+    padding: 8px 24px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.product-cart button:hover {
+    background-color: var(--dark-grey);
+}
+
+/* LOGIN PAGE*/
+.login-container {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    background: var(--white);
+    box-shadow: 1px 1px 5px var(--black-shadow);
+    margin: auto;
+    max-width: 1024px;
+    text-align: center;
+    height: 600px;
+    color: var(--dark-grey);
+}
+
+.login-form {
+    margin: auto;
+}
+
+.login-form img {
+    max-width: 225px;
+}
+
+.create {
+    font-weight: bold;
+}
+
+.login-fb {
+    background: #4267B2;
+    color: var(--pure-white);
+    font-size: 21px;
+    font-weight: lighter;
+    padding: 8px 28px 16px 28px;
+    border-radius: 5px;
+    cursor: pointer
+}
+
+.login-fb i {
+    color: var(--pure-white);
+    margin-right: 10px;
+    font-size: 1.75em;
+    position: relative;
+    top: 5px;
+}
+
+.login-form label {
+    display: block;
+    text-align: left;
+    margin: 16px auto 0 auto;
+    font-size: 18px;
+}
+
+.login-form input {
+    border: 1px solid var(--fade-grey);
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    height: 34px;
+    padding-left: 8px;
+}
+
+.login-submit {
+    padding: 15px 95px;
+    margin: 16px auto 16px auto;
+    border: 5px solid var(--dark-blue);
+    border-radius: 10px;
+    color: var(--dark-grey);
+    font-size: 21px;
+    font-weight: lighter;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-title {
+    background: url(../images/Universe3.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .3);
+    color: var(--white);
+}
+
+.login-title h1 {
+    text-align: left;
+    margin: 75px 0 0 32px;
+    line-height: 85px;
+}
+
+.subtext {
+    text-align: left;
+    margin: 45px 0 0 32px;
+    font-size: 1.6em;
+    max-width: 550px;
+}
+
+/* ABOUT US PAGE */
+.about-container {
+    margin: auto;
+    max-width: 1113px;
+}
+
+.about-container h1 {
+    margin: auto;
+    text-align: center;
+    color: var(--dark-grey);
+}
+
+.about {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto 100px auto;
+}
+
+.about-text {
+    border: 2px solid var(--dark-grey);
+    border-radius: 6px;
+    padding: 26px;
+    max-width: 500px;
+}
+
+.about-text h4 {
+    margin: auto;
+}
+
+.about img {
+    max-width: 300px;
+}
+
+/* SUPPORT PAGE */
+.contact-title {
+    margin: auto;
+    text-align: center;
+    color: var(--dark-grey);
+}
+
+.contact-container {
+    margin: 32px auto;
+    max-width: 1113px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 16px;
+    text-align: center;
+}
+
+.contact {
+    background: var(--white);
+    box-shadow: 1px 1px 7px var(--black-shadow);
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+}
+
+.contact i {
+    font-size: 2.5em;
+    color: var(--dark-grey);
+    margin: 32px auto 0 auto;
+}
+
+.contact h5 {
+    margin: 16px auto 32px auto;
+    color: var(--dark-grey);
+}
+
+.phone {
+    color: var(--hyperlink-blue);
+}
+
+.opening-hours {
+    text-align: left;
+    color: var(--dark-grey);
+    font-weight: lighter;
+}
+
+.opening-hours table {
+    margin: auto;
+}
+
+.contact-social p {
+    margin: 0 0 16px 0;
+    padding: 49px;
+    color: var(--white);
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+.c-fb {
+    background: #4267B2;
+}
+
+.c-tw {
+    background: #1DA1F2;
+}
+
+.c-ig {
+    background: #C13584;
+}
+
+.form-email {
+    display: grid;
+    grid-template-columns: auto;
+    max-width: 362px;
+    margin: auto;
+}
+
+.form-email label {
+    margin-top: 16px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: lighter;
+    color: var(--dark-grey);
+}
+
+.form-email input {
+    padding: 10px;
+    border: 1px solid var(--fade-grey);
+}
+
+.form-email textarea {
+    border: 1px solid var(--fade-grey);
+    overflow: hidden;
+    padding: 5px 5px 100px 5px;
+}
+
+.contact-checkbox {
+    text-align: left;
+}
+
+.contact-checkbox label {
+    display: inline-block;
+    font-size: 16px;
+}
+
+.contact-submit input {
+    margin: 32px auto 0 auto;
+    padding: 15px 138px;
+    font-size: 18px;
+    border: none;
+    background: var(--dark-grey);
+    color: var(--white);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#validationMessage {
+    display: none;
+    background: var(--green);
+    color: var(--pure-white);
+    font-weight: 100;
+    border-radius: 10px;
+    width: 60%;
+    padding: 1px 8px;
+    margin: auto;
+}
+
+.form-error {
+    display: none;
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 2px;
 }
 
 footer {
