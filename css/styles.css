@@ -3,23 +3,31 @@
     --white: #f2f2f2;
     --yellow-cta: #fffafa;
     --pure-white: #fff;
+    --fade-white: #ffffff50;
+    --fade-grey: #c8c8c838;
     --red: #E23A39;
     --red-transparent: #F2414190;
     --green: #0f893b;
     --purple: #210825;
+    --fade-purple: #21082580;
     --dark-purple: #0A0022;
     --dark-grey: #343434;
-    --fade-grey: #34343450;
+    --fade-dark: #34343450;
     --yellow: #8c6f23;
     --blue-grey: #484d64;
+    --fade-bg: #484d6480;
     --light-blue: #b9c4ce;
     --dark-blue: #1d2540;
+    --fade-blue: #1d254080;
     --black-shadow: #00000035;
 }
 
 * {
     font-family: "Europa", Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    text-shadow: rgba(0, 0, 0, .1) 0 0 1px;
 }
 
 main {
@@ -38,6 +46,7 @@ ul {
 
 h1 {
     font-size: 6rem;
+    color: var(--dark-grey);
     font-weight: lighter;
     margin: auto;
 }
@@ -79,28 +88,27 @@ header {
 .nav {
     display: flex;
     justify-content: center;
-    gap: 4px;
-    border: 1px var(--fade-grey);
+    border: 1px solid var(--fade-dark);
     border-style: solid none solid none;
-    margin: 12px auto;
 }
 
 .nav a {
     color: var(--dark-grey);
-    padding: 15px;
-    width: 200px;
+    padding: 10px;
+    width: 150px;
     transition: 0.3s;
 }
 
 .nav a:hover {
-    background-color: var(--fade-grey);
+    background-color: var(--fade-dark);
 }
 
 .breadcrumb {
     text-align: left;
-    padding: 12px 16px;
+    padding: 5px 16px;
     list-style: none;
     background: var(--white);
+    border-bottom: 1px solid var(--fade-dark);
 }
 
 .breadcrumb li {
@@ -137,6 +145,7 @@ header {
 }
 
 .banner-content h1 {
+    color: var(--white);
     padding: 70px 0;
     line-height: 90px;
 }
@@ -192,6 +201,7 @@ header {
 }
 
 .store-banner h1 {
+    color: var(--white);
     text-align: center;
     float: left;
     width: 800px;
@@ -259,8 +269,8 @@ header {
 }
 
 .product-info {
-    border-top: 1px solid var(--fade-grey);
-    border-bottom: 1px solid var(--fade-grey);
+    border-top: 1px solid var(--fade-dark);
+    border-bottom: 1px solid var(--fade-dark);
     padding-bottom: 14px;
 }
 
@@ -280,7 +290,7 @@ header {
     color: var(--white);
     border: none;
     border-radius: 5px;
-    box-shadow: 1px 2px 2px var(--fade-grey);
+    box-shadow: 1px 2px 2px var(--fade-dark);
     font-size: 1.4rem;
     margin: auto 0;
     padding: 8px 24px;
@@ -298,7 +308,7 @@ header {
     grid-template-columns: 35% 65%;
     background: var(--white);
     box-shadow: 1px 1px 5px var(--black-shadow);
-    margin: auto;
+    margin: 50px auto;
     max-width: 1024px;
     text-align: center;
     height: 600px;
@@ -343,7 +353,7 @@ header {
 }
 
 .login-form input {
-    border: 1px solid var(--fade-grey);
+    border: 1px solid var(--fade-dark);
     border-radius: 5px;
     font-size: 1em;
     width: 100%;
@@ -372,6 +382,7 @@ header {
 }
 
 .login-title h1 {
+    color: var(--white);
     text-align: left;
     margin: 75px 0 0 32px;
     line-height: 85px;
@@ -393,7 +404,6 @@ header {
 .about-container h1 {
     margin: auto;
     text-align: center;
-    color: var(--dark-grey);
 }
 
 .about {
@@ -421,7 +431,6 @@ header {
 .contact-title {
     margin: auto;
     text-align: center;
-    color: var(--dark-grey);
 }
 
 .contact-container {
@@ -503,11 +512,11 @@ header {
 
 .form-email input {
     padding: 10px;
-    border: 1px solid var(--fade-grey);
+    border: 1px solid var(--fade-dark);
 }
 
 .form-email textarea {
-    border: 1px solid var(--fade-grey);
+    border: 1px solid var(--fade-dark);
     overflow: hidden;
     padding: 5px 5px 100px 5px;
 }
@@ -561,4 +570,182 @@ footer {
 
 footer img {
     max-width: 100px;
+}
+
+/* TEST STORE PAGE */
+.store-head {
+    text-align: center;
+    margin: 50px auto;
+ }
+
+ .store-container {
+    display: grid;
+    margin: auto;
+    max-width: 1400px;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(4, 400px);
+    gap: 40px;
+    background: linear-gradient(#210825, #0A0022);
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.sort-container {
+    grid-column: 1/1;
+    grid-row: 1/5 span;
+    background: linear-gradient(#484d6480, #1d254080, #0A002230, #0A002240);
+    background-size: cover;
+    max-width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    color: var(--white);
+}
+
+.top-card {
+    grid-column: 2/5;
+    grid-row: 1/2;
+    border-radius: 15px;
+    background-color: var(--fade-bg);
+    background: url(../images/witcherlogo.jpg);
+    background-size: cover;
+}
+
+.test-card {
+    background-color: var(--fade-bg);
+    border-radius: 15px;
+    padding: 20px;
+    color: var(--white);
+}
+
+.test-card img {
+    width: 260px;
+    height: 200px;
+    object-fit: cover;
+    object-position: 50%;
+    border-radius: 10px;
+}
+
+.test-top h5 {
+    margin: 5px auto;
+}
+
+.test-top p {
+    color: var(--light-blue);
+    font-weight: 100;
+}
+
+.test-details {
+    position: relative;
+}
+
+.test-bot {
+    display: flex;
+    position: absolute;
+    top: 105px;
+}
+
+.test-bot p {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--yellow);
+}
+
+.test-bot button {
+    padding: 15px 70px;
+    border-radius: 25px;
+    background-color: var(--yellow);
+    color: var(--white);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 45px;
+}
+
+.sort-container h5 {
+    margin: 30px auto 15px auto;
+    font-weight: 600;
+}
+
+.genres h5 {
+    margin-top: 0;
+}
+
+.sort-container input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    background-color: var(--blue-grey);
+    border-radius: 5px;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.sort-container input[type="checkbox"]:checked {
+    background-color: var(--yellow);
+}
+
+.sort-container li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 10px auto;
+    font-weight: 100;
+}
+
+.price-input {
+    display: flex;
+}
+
+.field {
+    position: relative;
+    height: 30px;
+}
+
+.field label {
+    display: block;
+}
+
+.field span {
+    position: absolute;
+    top: 115%;
+    width: 30px;
+    color: #ffffff50;
+    pointer-events: none;
+    text-align: center;
+}
+
+.field input {
+    height: 50px;
+    width: 100%;
+    background-color: var(--blue-grey);
+    border: none;
+    color: var(--white);
+    text-align: right;
+    border-radius: 10px;
+}
+
+.field input::-webkit-outer-spin-button,
+.field input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0 27px;
+}
+
+.separator {
+    width: 50px;
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.filter-confirm {
+    margin-top: 50px;
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--yellow);
+    color: var(--yellow-cta);
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
 }

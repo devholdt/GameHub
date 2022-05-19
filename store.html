@@ -35,93 +35,265 @@
     </header>
 
     <main>
-        <div class="store-banner">
-            <h1>Welcome to the universe of games!</h1>
-        </div>
 
-        <h2 class="store-heading">Game Hub Marketplace</h2>
+        <h1 class="store-head">Game Hub Store</h1>
 
-        <div class="search-container">
-            <label for="search">Search:</label>
-            <input type="text" id="search" placeholder="Search for over 3000 games...">
-        </div>
-        <!-- <div>
-                <span>Sort by:</span>
-                <span>Genre</span>
-                <span>Platform</span>
-                <span>Release Year</span>
-            </div> -->
+        <section class="store-container">
 
-        <section>
-            <div class="recommended-container">
-                <h4>Recommended for you</h4>
+            <div class="sort-container">
+                <ul class="genres">
+                    <h5>Genres</h5>
 
-                <div class="recommended">
+                    <li>
+                        <input type="checkbox" id="action" name="action" value="Action">
+                        <label for="action">Action</label>
+                    </li>
 
-                    <div class="product-card">
-                        <img src="/images/Placeholder.png" alt="Video Game Image">
-                        <div>
-                            <h5>Video Game</h5>
-                            <div class="product-info">
-                                <p>Lorem ipsum dolor sit amet</p>
-                                <a href="#" class="readmore">Game page</a>
-                            </div>
-                            <div class="product-cart">
-                                <p>$50</p>
-                                <button><i class="fa-solid fa-cart-arrow-down"></i></button>
-                            </div>
+                    <li>
+                        <input type="checkbox" id="adventure" name="adventure" value="Adventure">
+                        <label for="adventure">Adventure</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="rpg" name="rpg" value="RPG">
+                        <label for="rpg">Role-playing</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="sports" name="sports" value="Sports">
+                        <label for="sports">Sports</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="strategy" name="strategy" value="Strategy">
+                        <label for="strategy">Strategy</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="simulator" name="simulator" value="Simulator">
+                        <label for="simulator">Simulator</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="multiplayer" name="multiplayer" value="Multiplayer">
+                        <label for="multiplayer">Multiplayer</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="puzzle" name="puzzle" value="Puzzle">
+                        <label for="puzzle">Puzzle</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="casual" name="casual" value="Casual">
+                        <label for="casual">Casual</label>
+                    </li>
+
+                </ul>
+                <ul>
+                    <h5>Platforms</h5>
+
+                    <li>
+                        <input type="checkbox" id="pc" name="pc" value="PC">
+                        <label for="pc">PC</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="xbox" name="xbox" value="Xbox">
+                        <label for="xbox">Xbox</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="playstation" name="playstation" value="PlayStation">
+                        <label for="playstation">PlayStation</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="switch" name="switch" value="Switch">
+                        <label for="switch">Switch</label>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="retro" name="retro" value="Retro">
+                        <label for="retro">Retro</label>
+                    </li>
+
+                </ul>
+                <div>
+                    <h5>Price</h5>
+                    <div class="price-input">
+                        <div class="field">
+
+                            <label for="min">Min</label>
+                            <span>$</span>
+                            <input type="number" value="0" id="min">
+
+                        </div>
+
+                        <div class="separator">-</div>
+
+                        <div class="field">
+
+                            <label for="max">Max</label>
+                            <span>$</span>
+                            <input type="number" value="100" id="max">
+
                         </div>
                     </div>
-
-                    <div class="product-card">
-                        <img src="/images/Placeholder.png" alt="Video Game Image">
-                        <div>
-                            <h5>Video Game</h5>
-                            <div class="product-info">
-                                <p>Lorem ipsum dolor sit amet</p>
-                                <a href="#" class="readmore">Game page</a>
-                            </div>
-                            <div class="product-cart">
-                                <p>$50</p>
-                                <button><i class="fa-solid fa-cart-arrow-down"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <img src="/images/Placeholder.png" alt="Video Game Image">
-                        <div>
-                            <h5>Video Game</h5>
-                            <div class="product-info">
-                                <p>Lorem ipsum dolor sit amet</p>
-                                <a href="#" class="readmore">Game page</a>
-                            </div>
-                            <div class="product-cart">
-                                <p>$50</p>
-                                <button><i class="fa-solid fa-cart-arrow-down"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <img src="/images/Placeholder.png" alt="Video Game Image">
-                        <div>
-                            <h5>Video Game</h5>
-                            <div class="product-info">
-                                <p>Lorem ipsum dolor sit amet</p>
-                                <a href="#" class="readmore">Game page</a>
-                            </div>
-                            <div class="product-cart">
-                                <p>$50</p>
-                                <button><i class="fa-solid fa-cart-arrow-down"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
 
+                <button class="filter-confirm">Apply</button>
+
             </div>
+
+            <div class="top-card"></div>
+
+            <div class="test-card">
+                <div>
+                    <img src="/images/spiderman1.jpg">
+                </div>
+                <div class="test-details">
+                    <div class="test-top">
+                        <h5>Marvel's Spider-Man</h5>
+                        <p>PlayStation</p>
+                    </div>
+                    <div class="test-bot">
+                        <p>$59</p>
+                        <button>BUY</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-card">
+                <div>
+                    <img src="/images/nomanssky1.jpg">
+                </div>
+                <div class="test-details">
+                    <div class="test-top">
+                        <h5>No Man's Sky</h5>
+                        <p>Xbox</p>
+                    </div>
+                    <div class="test-bot">
+                        <p>$30</p>
+                        <button>BUY</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-card">
+                <div>
+                    <img src="/images/stellaris-cover.jpg">
+                </div>
+                <div class="test-details">
+                    <div class="test-top">
+                        <h5>Stellaris</h5>
+                        <p>PC</p>
+                    </div>
+                    <div class="test-bot">
+                        <p>$42</p>
+                        <button>BUY</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-card">
+                <div>
+                    <img src="/images/fifagame.jpg">
+                </div>
+                <div class="test-details">
+                    <div class="test-top">
+                        <h5>FIFA 22</h5>
+                        <p>PlayStation</p>
+                    </div>
+                    <div class="test-bot">
+                        <p>$19</p>
+                        <button>BUY</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-card">
+                <div>
+                    <img src="/images/eldenring2.jpg">
+                </div>
+                <div class="test-details">
+                    <div class="test-top">
+                        <h5>Elden Ring</h5>
+                        <p>Xbox</p>
+                    </div>
+                    <div class="test-bot">
+                        <p>$60</p>
+                        <button>BUY</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-card">
+                <div>
+                    <img src="/images/witcherlogo.jpg">
+                </div>
+                <div class="test-details">
+                    <div class="test-top">
+                        <h5>The Witcher 3: Wild Hunt</h5>
+                        <p>PlayStation</p>
+                    </div>
+                    <div class="test-bot">
+                        <p>$29</p>
+                        <button>BUY</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-card">
+                <div>
+                    <img src="/images/Placeholder.png">
+                </div>
+                <div class="test-details">
+                    <div class="test-top">
+                        <h5>Video Game</h5>
+                        <p>PlayStation</p>
+                    </div>
+                    <div class="test-bot">
+                        <p>$19</p>
+                        <button>BUY</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-card">
+                <div>
+                    <img src="/images/Placeholder.png">
+                </div>
+                <div class="test-details">
+                    <div class="test-top">
+                        <h5>Video Game</h5>
+                        <p>PlayStation</p>
+                    </div>
+                    <div class="test-bot">
+                        <p>$19</p>
+                        <button>BUY</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="test-card">
+                <div>
+                    <img src="/images/Placeholder.png">
+                </div>
+                <div class="test-details">
+                    <div class="test-top">
+                        <h5>Video Game</h5>
+                        <p>PlayStation</p>
+                    </div>
+                    <div class="test-bot">
+                        <p>$19</p>
+                        <button>BUY</button>
+                    </div>
+                </div>
+            </div>
+
         </section>
+
     </main>
 
     <footer>
