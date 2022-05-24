@@ -27,14 +27,14 @@
             <a href="support.html">SUPPORT</a>
         </div>
 
+    </header>
+
+    <main>
+
         <ul class="breadcrumb">
             <li><a href="index.html">Home</a></li>
             <li>Store</li>
         </ul>
-
-    </header>
-
-    <main>
 
         <section class="store-container">
 
@@ -139,6 +139,11 @@
                             <input type="number" value="100" id="max">
 
                         </div>
+                    </div>
+                    <div class="price-preowned">
+                        <input type="checkbox" name="status" id="status">
+                        <label for="status">Pre-owned?*</label>
+                        <p>*Buy a pre-owned game and save 50%!</p>
                     </div>
                 </div>
 
@@ -270,32 +275,27 @@
                 <h5>Cart</h5>
 
                 <div class="cart-row">
-                    <span class="cart-item cart-header cart-column">Item</span>
-                    <span class="cart-price cart-header cart-column">Price</span>
-                    <span class="cart-quantity cart-header cart-column">Quantity</span>
+                    <span class="cart-item cart-column">Item</span>
+                    <span class="cart-price cart-column">Price</span>
+                    <span class="cart-remove cart-column">Remove</span>
                 </div>
 
-                <div class="cart-items">
-
-                    <!-- <div class="cart-row">
-                        <div class="cart-item cart-column">
-                            <img class="cart-item-image" src="/images/Placeholder.png">
-                            <span class="cart-item-title">Video Game</span>
-                        </div>
-                        <span class="cart-price cart-column">$0</span>
-                        <div class="cart-quantity cart-column">
-                            <input type="number" value="1" class="cart-quantity-input">
-                            <button class="btn-remove" type="button">X</button>
-                        </div>
-                    </div> -->
-
-                </div>
+                <div class="cart-items"></div>
 
                 <div class="cart-total">
                     <span class="cart-total-title">Total</span>
                     <span class="cart-total-price">$0</span>
                 </div>
-                <button class="store-btn btn-purchase">Confirm</button>
+                <button class="confirm-btn store-btn" disabled>Confirm</button>
+
+                <div id="purchaseModal">
+                    <div class="modal-content">
+                        <p>Thank you for your purchase!</p>
+                        <button class="close-btn">Go back</button>
+                    </div>
+                </div>
+
+            </div>
 
             </div>
 
@@ -303,8 +303,8 @@
 
     </main>
 
-    <script src="js/store.js"></script>
     <script src="js/productcard.js"></script>
+    <script src="js/store.js"></script>
 
     <footer>
         <p>/ &copy; Copyright Game Hub /</p>
