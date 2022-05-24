@@ -24,6 +24,24 @@ function purchaseConfirmation() {
   updateTotal();
 }
 
+const btn = document.querySelector(".confirm-btn");
+const modal = document.querySelector("#purchaseModal");
+const span = document.querySelector(".close-btn");
+
+btn.onclick = function () {
+  modal.style.display = "block";
+};
+
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
+
 // Add to cart
 const addItemButtons = document.querySelectorAll(".shop-item-button");
 for (let i = 0; i < addItemButtons.length; i++) {
@@ -93,24 +111,3 @@ function updateTotal() {
   }
   document.querySelector(".cart-total-price").innerText = total + "$";
 }
-
-// TEST MODAL
-const btn = document.querySelector(".confirm-btn");
-
-const modal = document.querySelector("#purchaseModal");
-
-const span = document.querySelector(".close-btn");
-
-btn.onclick = function () {
-  modal.style.display = "block";
-};
-
-span.onclick = function () {
-  modal.style.display = "none";
-};
-
-window.onclick = function (event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-};
