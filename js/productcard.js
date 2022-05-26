@@ -7,7 +7,10 @@ for (let i = 0; i < cardContainer.length; i++) {
                             <div class="product-details">
                                 <div class="details-top">
                                     <h5 class="shop-item-title">Video Game</h5>
-                                    <p>PlayStation</p>
+                                    <div>
+                                        <span class="unavailable-platform">PlayStation</span><span
+                                        class="unavailable-platform">Xbox</span><span class="unavailable-platform">PC</span>
+                                    </div>
                                 </div>
                                 <div class="details-bot">
                                     <p class="shop-item-price">$19</p>

@@ -38,7 +38,34 @@
 
         <section class="store-container">
 
-            <h1 class="store-head">Game Hub Store</h1>
+            <div class="store-head">
+                <h1>Game Hub Store</h1>
+            </div>
+
+            <div class="top-card">
+                <h2>Welcome to the universe of games</h2>
+            </div>
+
+            <div class="store-cart">
+
+                <h5>Cart</h5>
+
+                <div class="cart-row">
+                    <span class="cart-item cart-column">Item</span>
+                    <span class="cart-price cart-column">Price</span>
+                    <span class="cart-remove cart-column">Remove</span>
+                </div>
+
+                <div class="cart-items"></div>
+
+                <div class="cart-total">
+                    <span class="cart-total-title">Total</span>
+                    <span class="cart-total-price">$0</span>
+                </div>
+                <button class="confirm-btn store-btn" disabled>Confirm</button>
+
+            </div>
+
 
             <div class="sort-container">
                 <ul class="genres">
@@ -90,12 +117,12 @@
                     </li>
 
                 </ul>
-                <ul>
+                <ul class="platforms">
                     <h5>Platforms</h5>
 
                     <li>
-                        <input type="checkbox" id="pc" name="pc" value="PC">
-                        <label for="pc">PC</label>
+                        <input type="checkbox" id="playstation" name="playstation" value="PlayStation">
+                        <label for="playstation">PlayStation</label>
                     </li>
 
                     <li>
@@ -104,22 +131,12 @@
                     </li>
 
                     <li>
-                        <input type="checkbox" id="playstation" name="playstation" value="PlayStation">
-                        <label for="playstation">PlayStation</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="switch" name="switch" value="Switch">
-                        <label for="switch">Switch</label>
-                    </li>
-
-                    <li>
-                        <input type="checkbox" id="retro" name="retro" value="Retro">
-                        <label for="retro">Retro</label>
+                        <input type="checkbox" id="pc" name="pc" value="PC">
+                        <label for="pc">PC</label>
                     </li>
 
                 </ul>
-                <div>
+                <div class="sort-price">
                     <h5>Price</h5>
                     <div class="price-input">
                         <div class="field">
@@ -151,126 +168,261 @@
 
             </div>
 
-            <div class="top-card">
-                <h2>Welcome to the universe of games</h2>
+
+            <!-- <div class="toggle-button">
+                <button class="toggle-on"><i class="fa-solid fa-arrow-right"></i></button>
+                <button class="toggle-off"><i class="fa-solid fa-arrow-left"></i></button>
+            </div> -->
+
+            <div class="products-container">
+
+                <div class="product-list">
+
+                    <div class="product-card">
+                        <div>
+                            <img class="shop-item-image" src="/images/spiderman1.jpg">
+                        </div>
+                        <div class="product-details">
+                            <div class="details-top">
+                                <p class="shop-item-title">Marvel's Spider-Man</p>
+                                <div><span class="available-platform">PlayStation</span><span
+                                        class="unavailable-platform">Xbox</span><span
+                                        class="unavailable-platform">PC</span>
+                                </div>
+                            </div>
+                            <div class="details-bot">
+                                <p class="shop-item-price">$39</p>
+                                <button class="shop-item-button">BUY</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div>
+                            <img class="shop-item-image" src="/images/nomanssky1.jpg">
+                        </div>
+                        <div class="product-details">
+                            <div class="details-top">
+                                <p class="shop-item-title">No Man's Sky</p>
+                                <div><span class="available-platform">PlayStation</span><span
+                                        class="available-platform">Xbox</span><span class="available-platform">PC</span>
+                                </div>
+                            </div>
+                            <div class="details-bot">
+                                <p class="shop-item-price">$25</p>
+                                <button class="shop-item-button">BUY</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div>
+                            <img class="shop-item-image" src="/images/stellaris-cover.jpg">
+                        </div>
+                        <div class="product-details">
+                            <div class="details-top">
+                                <p class="shop-item-title">Stellaris</p>
+                                <div><span class="available-platform">PlayStation</span><span
+                                        class="available-platform">Xbox</span><span class="available-platform">PC</span>
+                                </div>
+                            </div>
+                            <div class="details-bot">
+                                <p class="shop-item-price">$35</p>
+                                <button class="shop-item-button">BUY</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="product-card">
+                        <div>
+                            <img class="shop-item-image" src="/images/ghostoftsushima.jpg">
+                        </div>
+                        <div class="product-details">
+                            <div class="details-top">
+                                <p class="shop-item-title">Ghost of Tsushima</p>
+                                <div><span class="available-platform">PlayStation</span><span
+                                        class="unavailable-platform">Xbox</span><span
+                                        class="unavailable-platform">PC</span>
+                                </div>
+                            </div>
+                            <div class="details-bot">
+                                <p class="shop-item-price">$59</p>
+                                <button class="shop-item-button">BUY</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div>
+                            <img class="shop-item-image" src="/images/eldenring2.jpg">
+                        </div>
+                        <div class="product-details">
+                            <div class="details-top">
+                                <p class="shop-item-title">Elden Ring</p>
+                                <div><span class="available-platform">PlayStation</span><span
+                                        class="available-platform">Xbox</span><span class="available-platform">PC</span>
+                                </div>
+                            </div>
+                            <div class="details-bot">
+                                <p class="shop-item-price">$60</p>
+                                <button class="shop-item-button">BUY</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div>
+                            <img class="shop-item-image" src="/images/witcherlogo.jpg">
+                        </div>
+                        <div class="product-details">
+                            <div class="details-top">
+                                <p class="shop-item-title">The Witcher 3: Wild Hunt</p>
+                                <div><span class="available-platform">PlayStation</span><span
+                                        class="available-platform">Xbox</span><span class="available-platform">PC</span>
+                                </div>
+                            </div>
+                            <div class="details-bot">
+                                <p class="shop-item-price">$32</p>
+                                <button class="shop-item-button">BUY</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div>
+                            <img class="shop-item-image" src="/images/valheim.jpg">
+                        </div>
+                        <div class="product-details">
+                            <div class="details-top">
+                                <p class="shop-item-title">Valheim</p>
+                                <div><span class="unavailable-platform">PlayStation</span><span
+                                        class="unavailable-platform">Xbox</span><span
+                                        class="available-platform">PC</span>
+                                </div>
+                            </div>
+                            <div class="details-bot">
+                                <p class="shop-item-price">$14</p>
+                                <button class="shop-item-button">BUY</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div>
+                            <img class="shop-item-image" src="/images/heartsofiron.jpg">
+                        </div>
+                        <div class="product-details">
+                            <div class="details-top">
+                                <p class="shop-item-title">Hearts of Iron IV</p>
+                                <div><span class="unavailable-platform">PlayStation</span><span
+                                        class="unavailable-platform">Xbox</span><span
+                                        class="available-platform">PC</span>
+                                </div>
+                            </div>
+                            <div class="details-bot">
+                                <p class="shop-item-price">$35</p>
+                                <button class="shop-item-button">BUY</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div>
+                            <img class="shop-item-image" src="/images/haloinfinite.jpg">
+                        </div>
+                        <div class="product-details">
+                            <div class="details-top">
+                                <p class="shop-item-title">Halo Infinite</p>
+                                <div><span class="unavailable-platform">PlayStation</span><span
+                                        class="available-platform">Xbox</span><span class="available-platform">PC</span>
+                                </div>
+                            </div>
+                            <div class="details-bot">
+                                <p class="shop-item-price">$59</p>
+                                <button class="shop-item-button">BUY</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div>
+                            <img class="shop-item-image" src="/images/crusaderkings.jpg">
+                        </div>
+                        <div class="product-details">
+                            <div class="details-top">
+                                <p class="shop-item-title">Crusader Kings III</p>
+                                <div><span class="available-platform">PlayStation</span><span
+                                        class="available-platform">Xbox</span><span class="available-platform">PC</span>
+                                </div>
+                            </div>
+                            <div class="details-bot">
+                                <p class="shop-item-price">$45</p>
+                                <button class="shop-item-button">BUY</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div>
+                            <img class="shop-item-image" src="/images/demonssouls.jpg">
+                        </div>
+                        <div class="product-details">
+                            <div class="details-top">
+                                <p class="shop-item-title">Demon's Souls</p>
+                                <div><span class="available-platform">PlayStation</span><span
+                                        class="unavailable-platform">Xbox</span><span
+                                        class="unavailable-platform">PC</span>
+                                </div>
+                            </div>
+                            <div class="details-bot">
+                                <p class="shop-item-price">$79</p>
+                                <button class="shop-item-button">BUY</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div>
+                            <img class="shop-item-image" src="/images/inscryption.jpg">
+                        </div>
+                        <div class="product-details">
+                            <div class="details-top">
+                                <p class="shop-item-title">Inscryption</p>
+                                <div><span class="unavailable-platform">PlayStation</span><span
+                                        class="unavailable-platform">Xbox</span><span
+                                        class="available-platform">PC</span>
+                                </div>
+                            </div>
+                            <div class="details-bot">
+                                <p class="shop-item-price">$17</p>
+                                <button class="shop-item-button">BUY</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card placeholder-card"></div>
+                    <div class="product-card placeholder-card"></div>
+                    <div class="product-card placeholder-card"></div>
+                    <div class="product-card placeholder-card"></div>
+                    <div class="product-card placeholder-card"></div>
+                    <div class="product-card placeholder-card"></div>
+                    <div class="product-card placeholder-card"></div>
+                    <div class="product-card placeholder-card"></div>
+
+                </div>
+
             </div>
 
-            <div class="product-list">
-
-                <div class="product-card">
-                    <div>
-                        <img class="shop-item-image" src="/images/spiderman1.jpg">
-                    </div>
-                    <div class="product-details">
-                        <div class="details-top">
-                            <h5 class="shop-item-title">Marvel's Spider-Man</h5>
-                            <p>PlayStation</p>
-                        </div>
-                        <div class="details-bot">
-                            <p class="shop-item-price">$59</p>
-                            <button class="shop-item-button">BUY</button>
-                        </div>
-                    </div>
+            <div id="purchaseModal">
+                <div class="modal-content">
+                    <img src="/images/GameHub_Logo.png" alt="Game Hub logo">
+                    <p>Thank you for your purchase!</p>
+                    <button class="close-btn">Go back</button>
                 </div>
-
-                <div class="product-card">
-                    <div>
-                        <img class="shop-item-image" src="/images/nomanssky1.jpg">
-                    </div>
-                    <div class="product-details">
-                        <div class="details-top">
-                            <h5 class="shop-item-title">No Man's Sky</h5>
-                            <p>Xbox</p>
-                        </div>
-                        <div class="details-bot">
-                            <p class="shop-item-price">$30</p>
-                            <button class="shop-item-button">BUY</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div>
-                        <img class="shop-item-image" src="/images/stellaris-cover.jpg">
-                    </div>
-                    <div class="product-details">
-                        <div class="details-top">
-                            <h5 class="shop-item-title">Stellaris</h5>
-                            <p>PC</p>
-                        </div>
-                        <div class="details-bot">
-                            <p class="shop-item-price">$42</p>
-                            <button class="shop-item-button">BUY</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div>
-                        <img class="shop-item-image" src="/images/fifagame.jpg">
-                    </div>
-                    <div class="product-details">
-                        <div class="details-top">
-                            <h5 class="shop-item-title">FIFA 22</h5>
-                            <p>PlayStation</p>
-                        </div>
-                        <div class="details-bot">
-                            <p class="shop-item-price">$19</p>
-                            <button class="shop-item-button">BUY</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div>
-                        <img class="shop-item-image" src="/images/eldenring2.jpg">
-                    </div>
-                    <div class="product-details">
-                        <div class="details-top">
-                            <h5 class="shop-item-title">Elden Ring</h5>
-                            <p>Xbox</p>
-                        </div>
-                        <div class="details-bot">
-                            <p class="shop-item-price">$60</p>
-                            <button class="shop-item-button">BUY</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div>
-                        <img class="shop-item-image" src="/images/witcherlogo.jpg">
-                    </div>
-                    <div class="product-details">
-                        <div class="details-top">
-                            <h5 class="shop-item-title">The Witcher 3: Wild Hunt</h5>
-                            <p>PlayStation</p>
-                        </div>
-                        <div class="details-bot">
-                            <p class="shop-item-price">$29</p>
-                            <button class="shop-item-button">BUY</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-card placeholder-card"></div>
-                <div class="product-card placeholder-card"></div>
-                <div class="product-card placeholder-card"></div>
-                <div class="product-card placeholder-card"></div>
-                <div class="product-card placeholder-card"></div>
-                <div class="product-card placeholder-card"></div>
-                <div class="product-card placeholder-card"></div>
-                <div class="product-card placeholder-card"></div>
-                <div class="product-card placeholder-card"></div>
-                <div class="product-card placeholder-card"></div>
-                <div class="product-card placeholder-card"></div>
-                <div class="product-card placeholder-card"></div>
-                <div class="product-card placeholder-card"></div>
-                <div class="product-card placeholder-card"></div>
-
             </div>
 
-            <div class="store-cart">
+            <!-- <div class="store-cart">
 
                 <h5>Cart</h5>
 
@@ -296,7 +448,7 @@
                     </div>
                 </div>
 
-            </div>
+            </div> -->
 
             </div>
 
@@ -306,6 +458,7 @@
 
     <script src="js/productcard.js"></script>
     <script src="js/cart.js"></script>
+    <script src="js/togglefilter.js"></script>
 
     <footer>
         <p>/ &copy; Copyright Game Hub /</p>
