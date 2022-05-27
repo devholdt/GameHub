@@ -24,6 +24,7 @@
     --dark-blue: #1d2540;
     --fade-blue: #1d254080;
     --black-shadow: #00000035;
+    --fade-black: #00000099;
 }
 
 * {
@@ -270,6 +271,13 @@ footer a:hover {
 
 .create {
     font-weight: bold;
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.or {
+    font-size: 1.3rem;
+    margin-top: 15px;
 }
 
 .login-fb {
@@ -353,15 +361,17 @@ footer a:hover {
 
 .about {
     display: flex;
-    justify-content: space-around;
-    margin: 50px auto 100px auto;
+    justify-content: space-evenly;
+    margin: 50px auto 20px auto;
 }
 
 .about-text {
-    border: 2px solid var(--dark-grey);
-    border-radius: 6px;
+    border: 1px solid var(--fade-grey);
     padding: 26px;
     max-width: 500px;
+    box-shadow: 3px 3px 5px var(--black-shadow);
+    transform: rotate(1deg);
+    border-radius: 5px;
 }
 
 .about-text h4 {
@@ -369,7 +379,12 @@ footer a:hover {
 }
 
 .about img {
-    max-width: 300px;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 3px 3px 5px var(--black-shadow);
+    transform: rotate(-2deg);
+    border-radius: 5px;
 }
 
 /* SUPPORT PAGE */
@@ -507,12 +522,6 @@ footer a:hover {
 
 /* STORE PAGE */
 .store-container {
-    /* display: grid;
-    margin: 20px auto;
-    grid-template-columns: 250px auto 411px;
-    grid-template-rows: auto;
-    gap: 30px; */
-    /* background: linear-gradient(#210825, #0A0022); */
     border-radius: 15px;
     margin-top: 50px;
 }
@@ -521,8 +530,6 @@ footer a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* grid-column: 2/3;
-    grid-row: 1/2; */
     color: var(--white);
     border-radius: 15px;
     width: 100%;
@@ -531,8 +538,6 @@ footer a:hover {
  }
 
  .top-card {
-    /* grid-column: 2/3;
-    grid-row: 2/3; */
     margin: 30px auto;
     border-radius: 15px;
     background-color: var(--fade-bg);
@@ -551,11 +556,8 @@ footer a:hover {
 }
 
 .sort-container {
-    /* grid-column: 1/2;
-   grid-row-start: 1; */
     position: sticky;
     top: 20px;
-    /* background: linear-gradient(#484d6480, #1d254000); */
     background: linear-gradient(#0A0022, #210825);
     padding: 25px 20px;
     border-radius: 15px;
@@ -569,12 +571,9 @@ footer a:hover {
 }
 
 .store-cart {
-    /* grid-column: 3/4;
-    grid-row-start: 1; */
     overflow: auto;
     position: sticky;
     top: 20px;
-    /* background: linear-gradient(#484d6480, #1d254000); */
     background: linear-gradient(#0A0022, #210825);
     padding: 25px 20px;
     border-radius: 15px;
@@ -584,20 +583,7 @@ footer a:hover {
     margin: 0 0 30px 30px;
 }
 
-/* .products-container {
-    margin: 30px 0;
-    grid-column: 2/3;
-    grid-row: 3/auto; 
-    display: grid;
-    grid-template-columns: repeat(4, 250px);
-    grid-template-rows: repeat(5, 400px);
-    gap: 30px; 
-} */
-
 .product-list {
-    /* display: flex;
-    flex-wrap: wrap;
-    gap: 30px; */
     margin: 30px auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -605,9 +591,6 @@ footer a:hover {
 }
 
 .product-card {
-    /* background-color: var(--fade-bg); */
-    /* width: 265px;
-    height: 400px; */
     min-width: 275px;
     height: 100%;
     background: linear-gradient(#210825, #0A0022);
@@ -1009,10 +992,6 @@ footer a:hover {
         padding: 30px 0 80px 0;
     }
 
-    .store-head, .top-card {
-        margin: 10px;
-    }
-
     .sort-container {
         height: 100%;
         top: 15px;
@@ -1023,7 +1002,6 @@ footer a:hover {
 
     .product-list {
         grid-template-columns: repeat(2, auto);
-        margin: 10px;
         gap: 5px;
     }
 
@@ -1068,6 +1046,14 @@ footer a:hover {
 }
 
 @media (max-width: 1023px) {
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
     footer img {
         display: none;
     }
@@ -1075,11 +1061,11 @@ footer a:hover {
     footer {
         border: none;
         margin: 50px auto 0 auto;
-        padding: 50px 0;
+        padding: 50px 16px;
         width: 100%;
         color: var(--fade-white);
         background-color: var(--dark-purple);
-        gap: 30px;
+        gap: 16px;
     }
 
     footer a {
@@ -1101,7 +1087,7 @@ footer a:hover {
 
     .banner-content {
         transform: scaleX(1);
-        background: var(--black-shadow);
+        background: var(--fade-black);
         width: 100%;
         height: 450px;
     }
@@ -1131,7 +1117,7 @@ footer a:hover {
     }
 
     .modal-content {
-        width: 50%;
+        width: 70%;
         z-index: 1;
     }
 
@@ -1143,16 +1129,33 @@ footer a:hover {
         padding: 15px;
         width: 70%;
     }
+
+    .login-container {
+        grid-template-columns: 50% 50%;
+    }
+
+    .about {
+        justify-content: center;
+    }
+
+    .about img {
+        width: 300px;
+        z-index: 1;
+    }
 }
 
 @media (max-width: 767px) {
-    header {
-        margin: 15px 5px;
-    }
-
     body {
         max-width: 767px;
         min-width: 360px;
+    }
+
+    footer {
+        gap: 8px;
+    }
+
+    footer p {
+        display: none;
     }
 
     .logo {
@@ -1160,11 +1163,19 @@ footer a:hover {
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     h2 {
-        font-size: 2.5rem;
+        font-size: 3rem;
+    }
+
+    .banner, .banner-content {
+        height: 530px;
+    }
+
+    .banner {
+        background-position: 19% 50%;
     }
 
     .top-card h2 {
@@ -1174,22 +1185,21 @@ footer a:hover {
     .store-cart {
         float: none;
         position: static;
-        width: 97%;
-        margin: 10px;
+        width: 100%;
+        margin: 10px auto;
     }
 
     .store-cart img {
         display: block;
-        width: 200px;
-    }
-
-    .product-list {
-        grid-template-columns: auto auto;
+        width: 100px;
+        height: 74px;
+        object-fit: cover;
     }
 
     .contact-container {
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        width: 80%;
     }
 
     .contact-email {
@@ -1198,6 +1208,48 @@ footer a:hover {
 
     .contact-phone {
         grid-row: 2;
+    }
+
+    .form-email {
+        max-width: 330px;
+        padding: 0 10px;
+    }
+
+    .about-container h1 {
+        margin: 50px auto;
+    }
+
+    .about {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 12px;
+        justify-items: center;
+        margin: auto;
+    }
+
+    .about img {
+        transform: none;
+        width: 80%;
+        height: 200px;
+        margin: 12px auto;
+        grid-row: 2/3;
+    }
+
+    .about-text {
+        grid-row: 1/2;
+        transform: none;
+        max-width: 80%;
+    }
+
+    .login-container {
+        display: flex;
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    .login-title {
+        display: none;
     }
 }
 
