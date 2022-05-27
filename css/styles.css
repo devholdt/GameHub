@@ -95,6 +95,7 @@ footer {
     border-top: 1px solid var(--dark-blue);
     text-align: center;
     align-items: center;
+    width: 80%;
 }
 
 footer * {
@@ -126,7 +127,7 @@ footer a:hover {
 }
 
 .nav a {
-    color: var(--white);
+    color: var(--pure-white);
     padding: 12px;
     width: 200px;
     border-right: 1px solid var(--white);
@@ -210,7 +211,7 @@ footer a:hover {
     text-transform: uppercase;
     border-radius: 50px;
     padding: 15px 50px;
-    color: var(--white);
+    color: var(--pure-white);
     font-size: 1.2rem;
     transition: 0.2s;
 }
@@ -386,10 +387,10 @@ footer a:hover {
     text-align: center;
 }
 
-.contact {
+.contact-box {
     background: var(--white);
     box-shadow: 1px 1px 7px var(--black-shadow);
-    margin-bottom: 32px;
+    margin-bottom: 20px;
     padding-bottom: 32px;
 }
 
@@ -412,6 +413,7 @@ footer a:hover {
     text-align: left;
     color: var(--dark-grey);
     font-weight: lighter;
+    margin-top: 32px;
 }
 
 .opening-hours table {
@@ -419,8 +421,8 @@ footer a:hover {
 }
 
 .contact-social p {
-    margin: 0 0 16px 0;
-    padding: 49px;
+    margin-top: 16px;
+    padding: 50px;
     color: var(--white);
     font-size: 21px;
     text-transform: uppercase;
@@ -672,8 +674,8 @@ footer a:hover {
 .details-bot button {
     padding: 15px 50px;
     border-radius: 25px;
-    background-color: var(--yellow);
-    color: var(--white);
+    background-color: var(--dark-yellow);
+    color: var(--pure-white);
     border: none;
     font-weight: 600;
     cursor: pointer;
@@ -913,23 +915,30 @@ footer a:hover {
       width: 200px;
   }
 
-  .close-btn {
-    color: var(--white);
-    background-color: var(--dark-blue);
-    margin-top: 30px;
-    padding: 10px 40px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+  .modal-buttons {
     font-size: 1.3rem;
-    box-shadow: 2px 2px 3px var(--black-shadow);
+    border: none;
+    border-radius: 10px;
+    margin-top: 30px;
   }
 
-  .close-btn:hover {
-      background-color: var(--blue-grey);
+  .modal-continue {
+    padding: 15px 50px;
+    background: var(--dark-yellow);
+    color: var(--pure-white);
+    font-weight: 400;
+    box-shadow: 0px 0px 5px var(--dark-yellow);
+    cursor: pointer;
   }
 
-  /* Desktop */
+  .modal-home {
+    padding: 15px 20px;
+    background: var(--dark-blue);
+    color: var(--white);
+    font-weight: 100;
+  }
+
+  /* Media queries */
 
 @media (max-width: 1885px) {
     .product-list {
@@ -938,6 +947,10 @@ footer a:hover {
 }
 
 @media (max-width: 1580px) {
+    .welcome-container {
+        width: 100%;
+    }
+   
     .top-card {
         margin: 15px auto;
     }
@@ -957,52 +970,48 @@ footer a:hover {
         margin-left: 15px;
         top: 10px;
     }
+
+    footer {
+        width: 90%;
+    }
 }
 
-@media (max-width: 1274px) {
-    main {
-        padding: 0;
+@media (max-width: 1332px) {
+    .welcome-container {
+        max-width: 100%;
     }
 
-    .breadcrumb {
-        display: none;
+    .welcome {
+        justify-content: center;
+    }
+
+    .welcome img {
+        width: 500px;
+        object-fit: contain;
+    }
+
+    .modal-content {
+        width: 50%;
     }
 
     footer {
-        display: none;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 1274px) {
+    .banner-content {
+        width: 600px;
+        line-height: 0px;
+    }
+
+    .banner-content h1 {
+        padding: 30px 0 80px 0;
     }
 
     .store-head, .top-card {
         margin: 10px;
     }
-
-    /* .toggle-button {
-        display: block;
-        float: left;
-        position: sticky;
-        top: 15px;
-        margin-right: 10px;
-        z-index: 1;
-    }
-
-    .toggle-button button {
-        padding: 20px 10px;
-        font-size: 1.8em;
-        border: none;
-        background-color: var(--dark-purple);
-        color: var(--white);
-        border-radius: 0 10px 10px 0;
-        box-shadow: 2px 3px 2px var(--black-shadow);
-        margin: 15px 0;
-    }
-
-     .toggle-on, .toggle-off {
-        display: block;
-    }
-
-    .toggle-off {
-        display: none;
-    } */
 
     .sort-container {
         height: 100%;
@@ -1052,22 +1061,88 @@ footer a:hover {
         padding: 15px 40px;
         font-size: 1em;
     }
+
+    .contact-container {
+        grid-template-columns: 49% 49%;
+    }
 }
 
 @media (max-width: 1023px) {
-   .sort-container {
-       display: none;
-   }
+    footer img {
+        display: none;
+    }
 
-   .store-cart {
-       width: 300px;
-   }
+    footer {
+        border: none;
+        margin: 50px auto 0 auto;
+        padding: 50px 0;
+        width: 100%;
+        color: var(--fade-white);
+        background-color: var(--dark-purple);
+        gap: 30px;
+    }
 
-   .modal-content {
-       width: 50%;
-       z-index: 1;
-   }
+    footer a {
+        color: var(--white);
+        border: 1px solid var(--white);
+        border-radius: 10px;
+        padding: 10px;
+    }
 
+    footer a:nth-child(n) {
+        width: 100px;
+    }
+
+    .banner {
+        background-position: left;
+        transform: scaleX(1);
+        margin: 20px auto;
+    }
+
+    .banner-content {
+        transform: scaleX(1);
+        background: var(--black-shadow);
+        width: 100%;
+        height: 450px;
+    }
+
+    .banner-content h1 {
+        padding-bottom: 150px;
+    }
+
+    .banner-content a {
+        padding: 24px 70px;
+    }
+
+    .welcome img {
+        display: none;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    .sort-container {
+        display: none;
+    }
+
+    .store-cart {
+        width: 300px;
+    }
+
+    .modal-content {
+        width: 50%;
+        z-index: 1;
+    }
+
+    .form-email {
+        max-width: 86%;
+    }
+
+    .contact-submit input {
+        padding: 15px;
+        width: 70%;
+    }
 }
 
 @media (max-width: 767px) {
@@ -1110,6 +1185,19 @@ footer a:hover {
 
     .product-list {
         grid-template-columns: auto auto;
+    }
+
+    .contact-container {
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .contact-email {
+        grid-row: 1;
+    }
+
+    .contact-phone {
+        grid-row: 2;
     }
 }
 

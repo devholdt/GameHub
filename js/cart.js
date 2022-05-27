@@ -24,21 +24,21 @@ function purchaseConfirmation() {
   updateTotal();
 }
 
-const btn = document.querySelector(".confirm-btn");
-const modal = document.querySelector("#purchaseModal");
-const span = document.querySelector(".close-btn");
+const confirmBtn = document.querySelector(".confirm-btn");
+const purchaseModal = document.querySelector("#purchaseModal");
+const continueBtn = document.querySelector(".modal-continue");
 
-btn.onclick = function () {
-  modal.style.display = "block";
+confirmBtn.onclick = function () {
+  purchaseModal.style.display = "block";
 };
 
-span.onclick = function () {
-  modal.style.display = "none";
+continueBtn.onclick = function () {
+  purchaseModal.style.display = "none";
 };
 
 window.onclick = function (event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
+  if (event.target === purchaseModal) {
+    purchaseModal.style.display = "none";
   }
 };
 
