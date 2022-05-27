@@ -115,6 +115,53 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.mobile-nav {
+display: none;
+overflow: hidden;
+background-color: var(--dark-blue);
+position: relative;
+box-shadow: 0 3px 3px var(--black-shadow);
+}
+
+#menuList {
+display: none;
+}
+
+#menuList a {
+color: white;
+padding: 20px;
+text-decoration: none;
+display: block;
+border-top: 1px solid var(--blue-grey);
+}
+
+.mobile-nav p {
+color: var(--white);
+padding: 22px;
+text-decoration: none;
+display: block;
+}
+
+.ham-btn {
+color: var(--white);
+padding: 20px 23px;
+font-size: 1.2em;
+border: none;
+background: var(--dark-purple);
+position: absolute;
+right: 0;
+top: 0;
+}
+
+.mobile-header {
+background-color: var(--dark-blue);
+color: var(--white);
+}
+
+.mobile-text {
+    font-weight: 100;
+}
+
 .logo {
     width: 200px;
     margin: 7px auto 3px auto;
@@ -123,7 +170,7 @@ footer a:hover {
 .nav {
     display: flex;
     justify-content: center;
-    padding-bottom: 10px;
+    padding: 10px;
     box-shadow: 0px 2px 3px var(--black-shadow);
 }
 
@@ -257,7 +304,6 @@ footer a:hover {
     margin: 50px auto;
     max-width: 1024px;
     text-align: center;
-    height: 600px;
     color: var(--dark-grey);
 }
 
@@ -298,14 +344,15 @@ footer a:hover {
     top: 5px;
 }
 
-.login-form label {
+.form-account label {
     display: block;
     text-align: left;
     margin: 16px auto 0 auto;
     font-size: 18px;
 }
 
-.login-form input {
+.form-account input[type="password"], 
+.form-account input[type="email"] {
     border: 1px solid var(--fade-dark);
     border-radius: 5px;
     font-size: 1em;
@@ -314,8 +361,50 @@ footer a:hover {
     padding-left: 8px;
 }
 
-.login-submit {
-    padding: 15px 95px;
+/* .password-guide {
+    margin: 20px auto 40px auto;
+    text-align: left;
+    font-size: 0.9em;
+    background: var(--pure-white);
+    padding: 10px 0 10px 22px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px var(--black-shadow);
+} */
+
+.password-guide p {
+    margin: 5px auto;
+}
+
+.password-guide {
+    margin: 20px auto 40px auto;
+    text-align: left;
+    font-size: 0.9em;
+    background: var(--pure-white);
+    padding: 10px 0 10px 22px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px var(--black-shadow);
+}
+
+.password-guide p:first-child {
+    font-size: 1rem;
+    font-weight: 900;
+    padding-bottom: 8px;
+}
+
+.valid {
+    color: var(--green);
+}
+
+.valid::before {
+    position: relative;
+    left: -10px;
+    content: "\2714";
+}
+
+.login-submit input {
+    padding: 15px;
+    width: 100%;
+    height: 100%;
     margin: 16px auto 16px auto;
     border: 5px solid var(--dark-blue);
     border-radius: 10px;
@@ -323,7 +412,6 @@ footer a:hover {
     font-size: 21px;
     font-weight: lighter;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .login-title {
@@ -346,6 +434,24 @@ footer a:hover {
     margin: 45px 0 0 32px;
     font-size: 1.6em;
     max-width: 550px;
+}
+
+#loginModal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--fade-dark);
+}
+
+#loginModal p {
+    margin-bottom: 30px;
+}
+
+#loginModal a {
+    padding: 15px 50px;
 }
 
 /* ABOUT US PAGE */
@@ -480,6 +586,15 @@ footer a:hover {
     border: 1px solid var(--fade-dark);
     overflow: hidden;
     padding: 5px 5px 100px 5px;
+}
+
+.form-email p {
+    text-align: right;
+    font-weight: 100;
+}
+
+.form-email-req {
+    color: var(--red);
 }
 
 .contact-checkbox {
@@ -884,7 +999,7 @@ footer a:hover {
   }
 
   .modal-content {
-    background-color: var(--light-blue);
+    background-color: var(--pure-white);
     margin: 15% auto;
     padding: 50px 20px;
     border-radius: 15px;
@@ -1125,6 +1240,20 @@ footer a:hover {
         max-width: 86%;
     }
 
+    .contact-checkbox label {
+        width: 270px;
+        margin: auto 10px;
+        vertical-align: middle;
+    }
+
+    .contact-checkbox input {
+        vertical-align: middle;
+    }
+
+    .contact-checkbox {
+        margin: 20px auto;
+    }
+
     .contact-submit input {
         padding: 15px;
         width: 70%;
@@ -1168,6 +1297,14 @@ footer a:hover {
 
     h2 {
         font-size: 3rem;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
     }
 
     .banner, .banner-content {

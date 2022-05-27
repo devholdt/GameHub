@@ -27,6 +27,24 @@
             <a href="support.html">SUPPORT</a>
         </div>
 
+        <div class="mobile-nav">
+
+            <p class="mobile-header">Game Hub <span class="mobile-text">- The universe of games</span></p>
+
+            <div id="menuList">
+                <a href="index.html">Home</a>
+                <a href="store.html">Store</a>
+                <a href="login.html">Sign up</a>
+                <a href="about.html">About us</a>
+                <a href="support.html">Support</a>
+            </div>
+
+            <button class="ham-btn">
+                <i class="fa fa-bars"></i>
+            </button>
+
+        </div>
+
     </header>
 
     <main>
@@ -42,15 +60,40 @@
                 <p class="create">Create an account</p>
                 <p href="#" class="login-fb"><i class="fab fa-facebook-square"></i>Sign in with Facebook</p>
                 <p class="or">-or-</p>
-                <form action="submit.php" method="POST">
+                <form class="form-account" action="submit.php" method="POST">
+
                     <label for="email">Email</label>
-                    <input type="email" name="email">
+                    <input type="email" name="email" id="accountEmail">
+                    <div class="form-error" id="loginEmailError">Please a valid email address</div>
+
                     <label for="password">Password</label>
-                    <input type="password" name="password">
-                    <div class="login-submit">
-                        <a href="">Get started</a>
+                    <input type="password" id="accountPassword" name="password">
+
+                    <div class="password-guide">
+
+                        <p>Password must:</p>
+
+                        <p id="length">Be between 6 and 20 characters long</p>
+                        <p id="lowercase">One lowercase character</p>
+                        <p id="uppercase">One uppercase character</p>
+                        <p id="number">A number (0-9)</p>
+
                     </div>
+
+                    <div class="login-submit">
+                        <input type="submit" id="loginSubmit" name="submit" value="Get started" class="inherit">
+                    </div>
+
                 </form>
+
+                <div id="loginModal">
+                    <div class="modal-content">
+                        <img src="/images/GameHub_Logo.png" alt="Game Hub logo">
+                        <p>You are now logged in!</p>
+                        <a href="index.html" class="modal-home modal-buttons">Home</a>
+                    </div>
+                </div>
+
             </div>
             <div class="login-title">
                 <div>
@@ -70,6 +113,9 @@
         <a href="about.html">About us</a>
         <a href="support.html"> Support</a>
     </footer>
+
+    <script src="js/hamburgermenu.js"></script>
+    <script src="js/createaccount.js"></script>
 
 </body>
 

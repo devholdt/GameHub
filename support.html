@@ -27,6 +27,24 @@
             <a href="support.html" class="nav-current">SUPPORT</a>
         </div>
 
+        <div class="mobile-nav">
+
+            <p class="mobile-header">Game Hub <span class="mobile-text">- The universe of games</span></p>
+
+            <div id="menuList">
+                <a href="index.html">Home</a>
+                <a href="store.html">Store</a>
+                <a href="login.html">Sign up</a>
+                <a href="about.html">About us</a>
+                <a href="support.html">Support</a>
+            </div>
+
+            <button class="ham-btn">
+                <i class="fa fa-bars"></i>
+            </button>
+
+        </div>
+
     </header>
 
     <main>
@@ -78,27 +96,32 @@
                     <div id="validationMessage">
                         <p>Thank you for contacting us!</p>
                     </div>
+
                     <form class="form-email" action="submit.php" method="POST">
 
-                        <label for="firstname">First Name</label>
+                        <p><span class="form-email-req">*</span>Required</p>
+
+                        <label for="firstname">First Name <span class="form-email-req">*</span></label>
                         <input name="firstname" id="firstname-co">
                         <div class="form-error" id="firstNameError">Please enter your first name</div>
 
-                        <label for="lastname">Last Name</label>
+                        <label for="lastname">Last Name <span class="form-email-req">*</span></label>
                         <input name="lastname" id="lastname-co">
                         <div class="form-error" id="lastNameError">Please enter your last name</div>
 
-                        <label for="email">Email</label>
+                        <label for="email">Email <span class="form-email-req">*</span></label>
                         <input name="email" id="email-co">
                         <div class="form-error" id="emailError">Please enter a valid email address</div>
 
-                        <label for="comment">Comment</label>
-                        <textarea id="comment" name="comment" id="comment"></textarea>
+                        <label for="comment">Comment <span class="form-email-req">*</span></label>
+                        <textarea id="comment" name="comment" id="comment"
+                            placeholder="At least 10 characters"></textarea>
                         <div class="form-error" id="commentError">Comment must be at least 10 characters long</div>
 
                         <div class="contact-checkbox">
                             <input type="checkbox" name="policy" id="policy">
-                            <label for="policy" class="c-label">I have read and understood our privacy policy</label>
+                            <label for="policy" class="c-label">I have read and understood our privacy policy<span
+                                    class="form-email-req">*</span></label>
                             <div class="form-error" id="policyError">*Required</div>
                         </div>
 
@@ -127,6 +150,7 @@
         <a href="support.html"> Support</a>
     </footer>
 
+    <script src="js/hamburgermenu.js"></script>
     <script src="js/support.js"></script>
 
 </body>
