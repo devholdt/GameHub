@@ -8,8 +8,9 @@ for (let i = 0; i < cardContainer.length; i++) {
                                 <div class="details-top">
                                     <h5 class="shop-item-title">Video Game</h5>
                                     <div>
-                                        <span class="unavailable-platform">PlayStation</span><span
-                                        class="unavailable-platform">Xbox</span><span class="unavailable-platform">PC</span>
+                                        <span class="unavailable-platform"><i class="fa-brands fa-playstation"></i></span>
+                                        <span class="unavailable-platform"><i class="fa-brands fa-xbox"></i></span>
+                                        <span class="unavailable-platform"><i class="fa-solid fa-computer"></i></span>
                                     </div>
                                 </div>
                                 <div class="details-bot">
