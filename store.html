@@ -86,70 +86,77 @@
 
 
             <div class="sort-container">
-                <ul class="genres">
-                    <h5>Genres</h5>
+
+                <ul class="categories">
+                    <h5>Categories</h5>
 
                     <li>
-                        <input type="checkbox" id="action" name="action" value="Action">
+                        <input type="radio" id="featured" class="category" name="category" value="true">
+                        <label for="featured">Featured</label>
+                    </li>
+
+                    <li>
+                        <input type="radio" id="action" class="category" name="category" value="18">
                         <label for="action">Action</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" id="adventure" name="adventure" value="Adventure">
+                        <input type="radio" id="adventure" class="category" name="category" value="19">
                         <label for="adventure">Adventure</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" id="rpg" name="rpg" value="RPG">
+                        <input type="radio" id="rpg" class="category" name="category" value="20">
                         <label for="rpg">Role-playing</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" id="sports" name="sports" value="Sports">
+                        <input type="radio" id="sports" class="category" name="category" value="21">
                         <label for="sports">Sports</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" id="strategy" name="strategy" value="Strategy">
+                        <input type="radio" id="strategy" class="category" name="category" value="22">
                         <label for="strategy">Strategy</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" id="simulator" name="simulator" value="Simulator">
+                        <input type="radio" id="simulator" class="category" name="category" value="23">
                         <label for="simulator">Simulator</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" id="multiplayer" name="multiplayer" value="Multiplayer">
+                        <input type="radio" id="multiplayer" class="category" name="category" value="24">
                         <label for="multiplayer">Multiplayer</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" id="puzzle" name="puzzle" value="Puzzle">
+                        <input type="radio" id="puzzle" class="category" name="category" value="25">
                         <label for="puzzle">Puzzle</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" id="casual" name="casual" value="Casual">
+                        <input type="radio" id="casual" class="category" name="category" value="26">
                         <label for="casual">Casual</label>
                     </li>
 
                 </ul>
+
                 <ul class="platforms">
                     <h5>Platforms</h5>
 
                     <li>
-                        <input type="checkbox" id="playstation" name="playstation" value="PlayStation">
+                        <input type="radio" id="playstation" class="platform" name="platform" value="27">
                         <label for="playstation">PlayStation</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" id="xbox" name="xbox" value="Xbox">
+                        <input type="radio" id="xbox" class="platform" name="platform" value="28">
                         <label for="xbox">Xbox</label>
                     </li>
 
                     <li>
-                        <input type="checkbox" id="pc" name="pc" value="PC">
+                        <input type="radio" id="pc" class="platform" name="platform" value="29">
                         <label for="pc">PC</label>
                     </li>
 
@@ -186,7 +193,9 @@
 
             </div>
 
-            <div class="product-list">
+            <div class="product-list"></div>
+
+            <!-- <div class="product-list">
 
                 <div class="product-card">
                     <div>
@@ -439,7 +448,7 @@
                 <div class="product-card placeholder-card"></div>
                 <div class="product-card placeholder-card"></div>
 
-            </div>
+            </div> -->
 
             <div id="purchaseModal">
                 <div class="modal-content">
@@ -467,6 +476,7 @@
     <script src="js/hamburgermenu.js"></script>
     <script src="js/productcard.js"></script>
     <script src="js/cart.js"></script>
+    <script src="js/rest_api.js"></script>
 
 </body>
 
