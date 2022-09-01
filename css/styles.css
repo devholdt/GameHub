@@ -668,7 +668,7 @@ color: var(--white);
     padding: 25px 20px;
     border-radius: 15px;
     color: var(--white);
-    height: 900px;
+    /* height: 900px; */
     width: 250px;
     display: flex;
     flex-wrap: wrap;
@@ -697,7 +697,7 @@ color: var(--white);
 
 .product-card {
     min-width: 205px;
-    width: 32%;
+    width: 49%;
     height: 100%;
     background: linear-gradient(#210825, #0A0022);
     border-radius: 15px;
@@ -708,7 +708,7 @@ color: var(--white);
 
 .product-card img {
     width: 100%;
-    height: 150px;
+    height: 330px;
     object-fit: cover;
     object-position: 50%;
     border-radius: 10px;
@@ -748,6 +748,14 @@ color: var(--white);
     color: var(--white);
     padding: 6px;
     width: 40px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.category-icon {
+    background: var(--fade-green);
+    color: var(--white);
+    padding: 6px;
     text-align: center;
     border-radius: 5px;
 }
@@ -809,6 +817,27 @@ color: var(--white);
     gap: 5px;
     margin: 10px auto;
     font-weight: 100;
+}
+
+.categories {
+    margin: 25px 0;
+}
+
+#search-input {
+    padding: 6px;
+    font-size: 1em;
+    width: 66%;
+    border-radius: 5px;
+}
+
+.search-button {
+    padding: 6px 8px;
+    font-size: 1em;
+    background: var(--dark-grey);
+    border: 1px solid var(--light-yellow);
+    color: var(--light-yellow);
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .price-input {
@@ -1050,11 +1079,12 @@ color: var(--white);
     }
 
     .product-card:hover {
-        transform: scale(1.05);
+        transform: scale(1.02);
+        cursor: pointer;
     }
     
     .product-card:hover img {
-        transform: scale(1.07);
+        transform: scale(1.01);
     }
 
     .details-bot button:hover {

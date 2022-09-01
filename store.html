@@ -87,6 +87,11 @@
 
             <div class="sort-container">
 
+                <div class="search-container">
+                    <input type="search" id="search-input">
+                    <button class="search-button">Search</button>
+                </div>
+
                 <ul class="categories">
                     <h5>Categories</h5>
 
@@ -96,67 +101,67 @@
                     </li>
 
                     <li>
-                        <input type="radio" id="action" class="category" name="category" value="18">
+                        <input type="radio" id="action" class="category" name="category" value="16">
                         <label for="action">Action</label>
                     </li>
 
                     <li>
-                        <input type="radio" id="adventure" class="category" name="category" value="19">
+                        <input type="radio" id="adventure" class="category" name="category" value="17">
                         <label for="adventure">Adventure</label>
                     </li>
 
                     <li>
-                        <input type="radio" id="rpg" class="category" name="category" value="20">
+                        <input type="radio" id="rpg" class="category" name="category" value="18">
                         <label for="rpg">Role-playing</label>
                     </li>
 
                     <li>
-                        <input type="radio" id="sports" class="category" name="category" value="21">
+                        <input type="radio" id="sports" class="category" name="category" value="19">
                         <label for="sports">Sports</label>
                     </li>
 
                     <li>
-                        <input type="radio" id="strategy" class="category" name="category" value="22">
+                        <input type="radio" id="strategy" class="category" name="category" value="20">
                         <label for="strategy">Strategy</label>
                     </li>
 
                     <li>
-                        <input type="radio" id="simulator" class="category" name="category" value="23">
+                        <input type="radio" id="simulator" class="category" name="category" value="21">
                         <label for="simulator">Simulator</label>
                     </li>
 
                     <li>
-                        <input type="radio" id="multiplayer" class="category" name="category" value="24">
+                        <input type="radio" id="multiplayer" class="category" name="category" value="22">
                         <label for="multiplayer">Multiplayer</label>
                     </li>
 
                     <li>
-                        <input type="radio" id="puzzle" class="category" name="category" value="25">
+                        <input type="radio" id="puzzle" class="category" name="category" value="23">
                         <label for="puzzle">Puzzle</label>
                     </li>
 
                     <li>
-                        <input type="radio" id="casual" class="category" name="category" value="26">
+                        <input type="radio" id="casual" class="category" name="category" value="24">
                         <label for="casual">Casual</label>
                     </li>
 
                 </ul>
 
-                <ul class="platforms">
+                <!-- <ul class="platforms">
                     <h5>Platforms</h5>
 
                     <li>
-                        <input type="radio" id="playstation" class="platform" name="platform" value="27">
+                        <input type="radio" id="playstation" class="platform" name="platform" value="28">
                         <label for="playstation">PlayStation</label>
                     </li>
 
                     <li>
-                        <input type="radio" id="xbox" class="platform" name="platform" value="28">
+                        <input type="radio" id="xbox" class="platform" name="platform" value="29">
                         <label for="xbox">Xbox</label>
                     </li>
 
                     <li>
-                        <input type="radio" id="pc" class="platform" name="platform" value="29">
+                        <input type="radio" id="pc" class="platform" name="platform" value="30">
                         <label for="pc">PC</label>
                     </li>
 
@@ -167,7 +172,7 @@
                         <div class="field">
 
                             <label for="min">Min</label>
-                            <span>$</span>
+                            <span>Kr</span>
                             <input type="number" value="0" id="min">
 
                         </div>
@@ -177,8 +182,8 @@
                         <div class="field">
 
                             <label for="max">Max</label>
-                            <span>$</span>
-                            <input type="number" value="100" id="max">
+                            <span>Kr</span>
+                            <input type="number" value="1000" id="max">
 
                         </div>
                     </div>
@@ -187,9 +192,9 @@
                         <label for="status">Pre-owned?*</label>
                         <p>*Buy a pre-owned game and save 50%!</p>
                     </div>
-                </div>
+                </div> -->
 
-                <button class="store-btn">Apply</button>
+                <button class="store-btn" id="resetButton">Reset</button>
 
             </div>
 
@@ -474,9 +479,9 @@
     </footer>
 
     <script src="js/hamburgermenu.js"></script>
+    <script src="js/productlist.js"></script>
     <script src="js/productcard.js"></script>
     <script src="js/cart.js"></script>
-    <script src="js/rest_api.js"></script>
 
 </body>
 
