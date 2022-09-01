@@ -27,9 +27,21 @@ async function getProducts(url) {
             </div>
         </div>
     </div>`;
+
+      productCardTest();
     });
   } catch (error) {
     console.log(error);
+  }
+}
+
+// MAKE THIS FUNCTION WORK PROPERLY
+function productCardTest() {
+  const productCard = document.querySelectorAll(".product-card");
+  for (let i = 0; i < productCard.length; i++) {
+    productCard[i].onclick = function () {
+      console.log(productCard.innerHTML);
+    };
   }
 }
 
@@ -75,16 +87,16 @@ categories.forEach(function (category) {
   };
 });
 
-platforms.forEach(function (platform) {
-  platform.onclick = function (event) {
-    let newUrl;
-    const platformChosen = event.target.value;
-    newUrl = baseUrl + `&category=${platformChosen}`;
+// platforms.forEach(function (platform) {
+//   platform.onclick = function (event) {
+//     let newUrl;
+//     const platformChosen = event.target.value;
+//     newUrl = baseUrl + `&category=${platformChosen}`;
 
-    productContainer.innerHTML = "";
-    getProducts(newUrl);
-  };
-});
+//     productContainer.innerHTML = "";
+//     getProducts(newUrl);
+//   };
+// });
 
 resetButton.onclick = function () {
   search.value = "";
