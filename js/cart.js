@@ -3,16 +3,18 @@ function cartContentCheck() {
   const cartContents = document.querySelector(".cart-items");
 
   if (cartContents.childNodes.length > 0) {
-    confirmPurchase.disabled = false;
+    confirmBtn.disabled = false;
   } else {
-    confirmPurchase.disabled = true;
+    confirmBtn.disabled = true;
   }
 }
 
 // Confirm button
-const confirmPurchase = document.querySelector(".confirm-btn");
+const confirmBtn = document.querySelector(".confirm-btn");
+const purchaseModal = document.querySelector("#purchaseModal");
+const continueBtn = document.querySelector(".modal-continue");
 
-confirmPurchase.addEventListener("click", purchaseConfirmation);
+confirmBtn.addEventListener("click", purchaseConfirmation);
 
 function purchaseConfirmation() {
   const cartItems = document.querySelector(".cart-items");
@@ -23,10 +25,6 @@ function purchaseConfirmation() {
   cartContentCheck();
   updateTotal();
 }
-
-const confirmBtn = document.querySelector(".confirm-btn");
-const purchaseModal = document.querySelector("#purchaseModal");
-const continueBtn = document.querySelector(".modal-continue");
 
 confirmBtn.onclick = function () {
   purchaseModal.style.display = "block";

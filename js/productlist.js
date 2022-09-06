@@ -2,7 +2,6 @@ const baseUrl =
   "http://localhost/gamehub/wp-json/wc/store/products?per_page=15";
 const productContainer = document.querySelector(".product-list");
 const categories = document.querySelectorAll(".category");
-// const platforms = document.querySelectorAll(".platform");
 const resetButton = document.querySelector("#resetButton");
 const searchButton = document.querySelector(".search-button");
 const search = document.querySelector("#search-input");
@@ -28,7 +27,7 @@ async function getProducts(url) {
         </div>
     </div>`;
 
-      productCardTest();
+      // productCardTest();
     });
   } catch (error) {
     console.log(error);
@@ -36,14 +35,14 @@ async function getProducts(url) {
 }
 
 // MAKE THIS FUNCTION WORK PROPERLY
-function productCardTest() {
-  const productCard = document.querySelectorAll(".product-card");
-  for (let i = 0; i < productCard.length; i++) {
-    productCard[i].onclick = function () {
-      console.log(productCard.innerHTML);
-    };
-  }
-}
+// function productCardTest() {
+//   const productCard = document.querySelectorAll(".product-card");
+//   for (let i = 0; i < productCard.length; i++) {
+//     productCard[i].onclick = function () {
+//       console.log(productCard.innerHTML);
+//     };
+//   }
+// }
 
 /* <div class="product-platforms">
                   <span class="platform-icon"><i class="fa-brands fa-playstation"></i></span>
@@ -86,17 +85,6 @@ categories.forEach(function (category) {
     getProducts(newUrl);
   };
 });
-
-// platforms.forEach(function (platform) {
-//   platform.onclick = function (event) {
-//     let newUrl;
-//     const platformChosen = event.target.value;
-//     newUrl = baseUrl + `&category=${platformChosen}`;
-
-//     productContainer.innerHTML = "";
-//     getProducts(newUrl);
-//   };
-// });
 
 resetButton.onclick = function () {
   search.value = "";
