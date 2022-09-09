@@ -1,7 +1,6 @@
-const productContainer = document.querySelector(".product-list");
 const baseUrl =
-  "http://localhost/gamehub/wp-json/wc/store/products?per_page=15";
-
+  "https://devholdt.no/gamehub/wp-json/wc/store/products?per_page=15";
+const productContainer = document.querySelector(".product-list");
 const categories = document.querySelectorAll(".category");
 const resetButton = document.querySelector("#resetButton");
 const searchButton = document.querySelector(".search-button");

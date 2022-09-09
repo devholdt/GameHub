@@ -8,7 +8,7 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-const url = "http://localhost/gamehub/wp-json/wc/store/products/" + id;
+const url = "https://devholdt.no/gamehub/wp-json/wc/store/products/" + id;
 
 async function gameDetails() {
   try {
