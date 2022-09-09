@@ -686,6 +686,7 @@ color: var(--white);
     width: 350px;
     float: right;
     margin-left: 10px;
+    
 }
 
 .product-list {
@@ -711,6 +712,20 @@ color: var(--white);
     100% {
         transform: rotate(360deg);
     }
+}
+
+.up-container {
+    float: right;
+}
+
+.up-button {
+    padding: 10px 19px;
+    font-size: 1.5em;
+    border-radius: 15px;
+    color: var(--white);
+    border: none;
+    background: linear-gradient(#0A0022, #210825);
+    cursor: pointer;
 }
 
 .product-container {
@@ -925,10 +940,6 @@ color: var(--white);
     background: var(--white);
     color: var(--dark-yellow);
 }
-
-/* .details-bot button:hover {
-    background-color: var(--blue-grey);
-} */
 
 .sort-container h5 {
     margin: 0 auto 15px auto;

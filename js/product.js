@@ -27,8 +27,9 @@ async function gameDetails() {
 
                                 <div class="top-detpage">
                                     <h1>${game.name}</h1>
-                                     
-                                    <div>${game.short_description}</div>                                  
+            
+                                    <div>${game.short_description}</div> 
+                                    
                                 </div>
 
                                 <div class="bot-detpage">
