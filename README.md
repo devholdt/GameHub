@@ -2,7 +2,7 @@
 
 ![crosscourseproject1](https://user-images.githubusercontent.com/81162745/203309293-16e4e5da-598b-4043-954d-83ba19814651.png)
 
-A website for a fictional website to buy and sell video games and read gaming news.
+A project where I created a fictional website where users can buy and sell video games and read gaming news.
 
 ## Description
 
